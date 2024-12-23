@@ -1,0 +1,12 @@
+<div id="box7" style="width: 200px; height: 100px; background: lightcyan;">
+    Clique com o botão direito aqui
+  </div>
+  
+  <script>
+    const box7 = document.getElementById('box7');
+    box7.addEventListener('contextmenu', (event) => {
+      event.preventDefault(); // Impede o menu de contexto padrão
+      alert('Menu de contexto personalizado!');
+    });
+  </script>
+  

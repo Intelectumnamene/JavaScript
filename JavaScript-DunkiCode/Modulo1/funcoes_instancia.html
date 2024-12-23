@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcções e Instância</title>
+</head>
+<body>
+    <p id="teste"></p>
+
+
+    <script>
+
+        function Pessoa(){
+            this.nome = "Luiz";
+            this.cor = "Preto";
+
+        }
+
+        let pessoa = new Pessoa();
+        let pessoa2 = new Pessoa();// é preciso colocar o nome da função em maiúsculo.
+        pessoa.nome = 'Pedro'
+        console.log(pessoa.nome);
+        
+        document.getElementById("teste").innerHTML= `${pessoa.nome} e ${pessoa.cor} e ${pessoa2.nome}`//Note que pessoa dois assumiu o primeiro nome dentro da função!
+        
+    </script>
+</body>
+</html>

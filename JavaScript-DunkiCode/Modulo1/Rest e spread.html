@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest e spread</title>
+</head>
+<body>
+
+    <p id="teste"></p>
+
+<script>
+    let nomes = [
+        { nome: 'Joao' },
+        { nome: 'felipe' }
+    ];
+
+    const objetos = [...nomes, { nome: 'Guilherme' }];
+    
+    // Formatar os objetos como strings para exibição
+    let resultado = objetos.map(obj => obj.nome).join(', ');
+    
+    // Inserir no HTML
+    document.getElementById('teste').innerHTML = resultado;
+
+    // Exibir no console
+    console.log(objetos);
+</script>
+
+
+  
+
+
+    
+</body>
+</html>

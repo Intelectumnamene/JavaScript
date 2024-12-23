@@ -1,0 +1,1 @@
+"O DOM é uma representação estruturada de todas as tags, atributos e conteúdos de um documento HTML, permitindo interação e manipulação através de programação."

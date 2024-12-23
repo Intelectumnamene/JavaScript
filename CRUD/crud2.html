@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Simples em Português</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input, button { margin: 5px; padding: 8px; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 5px 0; display: flex; justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <h1>Lista de Tarefas</h1>
+  <input type="text" id="campoTarefa" placeholder="Digite uma nova tarefa" />
+  <button onclick="adicionarTarefa()">Adicionar</button>
+
+  <ul id="listaTarefas"></ul>
+
+  <script>
+    // Array para armazenar as tarefas
+    let tarefas = [];
+
+    // CREATE: Adicionar nova tarefa
+    function adicionarTarefa() {
+      const campoTarefa = document.getElementById('campoTarefa');
+      const novaTarefa = campoTarefa.value.trim(); // Remove espaços desnecessários
+
+      if (novaTarefa) {
+        tarefas.push(novaTarefa); // Adiciona a tarefa ao array
+        campoTarefa.value = ''; // Limpa o campo de entrada
+        atualizarLista(); // Atualiza a lista de tarefas na tela
+      } else {
+        alert("Digite uma tarefa válida!");
+      }
+    }
+
+    // READ: Mostrar as tarefas
+    function atualizarLista() {
+      const listaTarefas = document.getElementById('listaTarefas');
+      listaTarefas.innerHTML = ''; // Limpa a lista antes de renderizar
+
+      tarefas.forEach((tarefa, indice) => {
+        listaTarefas.innerHTML += `
+          <li>
+            <span>${tarefa}</span>
+            <button onclick="editarTarefa(${indice})">Editar</button>
+            <button onclick="excluirTarefa(${indice})">Excluir</button>
+          </li>
+        `;
+      });
+    }
+
+    // UPDATE: Editar uma tarefa existente
+    function editarTarefa(indice) {
+      const novaTarefa = prompt("Edite a tarefa:", tarefas[indice]);
+      if (novaTarefa !== null && novaTarefa.trim() !== '') {
+        tarefas[indice] = novaTarefa.trim(); // Atualiza o valor no array
+        atualizarLista(); // Atualiza a lista na tela
+      } else if (novaTarefa === '') {
+        alert("A tarefa não pode estar vazia!");
+      }
+    }
+
+    // DELETE: Excluir uma tarefa
+    function excluirTarefa(indice) {
+      if (confirm("Tem certeza que deseja excluir esta tarefa?")) {
+        tarefas.splice(indice, 1); // Remove a tarefa do array
+        atualizarLista(); // Atualiza a lista na tela
+      }
+    }
+
+    // Renderiza a lista inicial (vazia)
+    atualizarLista();
+  </script>
+</body>
+</html>

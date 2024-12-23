@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <p id="teste"></p>
+    <p id="teste2"></p>
+    
+    <script>
+
+        // Criando um array
+        let nome = ["Cachorro", "Gato", "Rato", "Coelho ", "Peixe", "Cavalo", "Papagaio", "Aranha"];
+        
+        
+        nome[2]='Gavião';
+        nome.push('Periquito');
+        document.getElementById('teste2').innerHTML= "Os noems são: "  + nome + "  ";
+        document.getElementById('teste').innerHTML= nome[0];
+        console(nome[1]);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Orientação a Objetos</title>
+</head>
+<body>
+    <p id="teste"></p>
+    <p id="teste2"></p>
+
+    <script>
+        function Nome(){
+            this.nome = 'Luiz',
+            this.cidade = 'Petrópolis'
+            this.verNome = function(numero, numero2){//um parâmetro temabém pode ser passado.
+                console.log(this.nome);
+                document.getElementById('teste').innerHTML= `${this.nome} e ${nome2.nome} moram na cidade de: ${this.cidade}, Luiz posui:${numero}anos e Pedro possui: ${numero2} anos.` ;
+            }
+
+        }
+        let nome = new Nome();//instância
+        let nome2 = new Nome();//instância
+
+        nome2.nome = 'Pedro'
+
+        nome2.verNome()
+        nome.verNome(42,10);//argumento passado
+        // chama a função
+
+        
+
+        function Carro(nome, marca, cor){
+            this.nome = nome,
+            this.marca = marca,
+            this.cor = cor
+        }
+
+        let carro = new Carro('Palio', 'Fiat', 'Vermelho');
+
+        console.log('Palio','Fiat','Vermelho');
+        document.getElementById('teste2').innerHTML = `${carro.nome},${carro.marca},${carro.cor},`
+    </script>
+</body>
+</html>

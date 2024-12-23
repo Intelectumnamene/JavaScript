@@ -1,0 +1,181 @@
+Se você está começando com JavaScript, existem conceitos e sintaxes essenciais que formam a base da linguagem e são usados em praticamente todos os projetos. Aqui está um conjunto organizado:
+
+---
+
+### **1. Variáveis e Constantes**
+- Declarar e manipular variáveis usando `let`, `const` e `var` (embora `var` seja menos recomendado hoje em dia).
+```javascript
+let nome = "Luiz"; // Variável que pode ser alterada
+const idade = 25;  // Constante, não pode ser alterada
+```
+
+---
+
+### **2. Tipos de Dados**
+- **Primitivos**: `string`, `number`, `boolean`, `undefined`, `null`, `symbol`, `bigint`.
+- **Objetos e Arrays**:
+```javascript
+let texto = "Olá";  // String
+let numero = 42;    // Number
+let ativo = true;   // Boolean
+let lista = [1, 2, 3]; // Array
+let obj = { nome: "Luiz", idade: 25 }; // Objeto
+```
+
+---
+
+### **3. Operadores**
+- **Aritméticos**: `+`, `-`, `*`, `/`, `%`, `**`.
+- **Comparação**: `==`, `===`, `!=`, `!==`, `<`, `>`, `<=`, `>=`.
+- **Lógicos**: `&&`, `||`, `!`.
+- **Atribuição**: `=`, `+=`, `-=`, etc.
+
+---
+
+### **4. Estruturas Condicionais**
+- Controle de fluxo com `if`, `else`, `else if`, `switch`.
+```javascript
+let idade = 20;
+if (idade >= 18) {
+    console.log("Maior de idade");
+} else {
+    console.log("Menor de idade");
+}
+
+let cor = "azul";
+switch (cor) {
+    case "vermelho":
+        console.log("Cor vibrante!");
+        break;
+    case "azul":
+        console.log("Cor calma!");
+        break;
+    default:
+        console.log("Cor desconhecida");
+}
+```
+
+---
+
+### **5. Laços**
+- Repetir tarefas com `for`, `while`, `do...while`, e métodos de array como `forEach`.
+```javascript
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+let i = 0;
+while (i < 3) {
+    console.log(i);
+    i++;
+}
+```
+
+---
+
+### **6. Funções**
+- Declarar e chamar funções, incluindo arrow functions.
+```javascript
+function saudacao(nome) {
+    return `Olá, ${nome}!`;
+}
+console.log(saudacao("Luiz"));
+
+const somar = (a, b) => a + b; // Arrow function
+console.log(somar(3, 4));
+```
+
+---
+
+### **7. Manipulação de Arrays**
+- Métodos comuns: `push`, `pop`, `shift`, `unshift`, `map`, `filter`, `reduce`, `forEach`.
+```javascript
+let numeros = [1, 2, 3];
+numeros.push(4); // Adiciona ao final
+numeros.map(x => x * 2); // Cria um novo array com os valores multiplicados por 2
+```
+
+---
+
+### **8. Objetos**
+- Criar, acessar, e manipular objetos.
+```javascript
+let pessoa = { nome: "Luiz", idade: 25 };
+console.log(pessoa.nome); // Acesso por ponto
+pessoa.sobrenome = "Silva"; // Adiciona uma nova propriedade
+```
+
+---
+
+### **9. Manipulação do DOM (Document Object Model)**
+- Selecionar e modificar elementos da página.
+```javascript
+document.getElementById("titulo").innerText = "Novo Título";
+document.querySelector(".classe").style.color = "red";
+```
+
+---
+
+### **10. Promessas e Async/Await**
+- Trabalhar com operações assíncronas.
+```javascript
+fetch("https://api.exemplo.com/dados")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+
+// Async/Await
+async function buscarDados() {
+    try {
+        let response = await fetch("https://api.exemplo.com/dados");
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+### **11. Eventos**
+- Adicionar interatividade com eventos como `click`, `input`, etc.
+```javascript
+document.getElementById("botao").addEventListener("click", () => {
+    console.log("Botão clicado!");
+});
+```
+
+---
+
+### **12. Escopo e Hoisting**
+- Entender como variáveis e funções são tratadas no JavaScript.
+```javascript
+function exemplo() {
+    let local = "Dentro";
+    console.log(local);
+}
+console.log(local); // Erro! Fora do escopo
+```
+
+---
+
+### **13. Classes**
+- Trabalhar com POO (Programação Orientada a Objetos).
+```javascript
+class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+    apresentar() {
+        return `Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`;
+    }
+}
+let pessoa = new Pessoa("Luiz", 25);
+console.log(pessoa.apresentar());
+```
+
+---
+
+Esses tópicos cobrem o essencial para começar a programar em JavaScript com confiança. À medida que você avança, pode explorar conceitos mais avançados, como módulos, Web APIs, frameworks (React, Vue, etc.), e padrões de design.

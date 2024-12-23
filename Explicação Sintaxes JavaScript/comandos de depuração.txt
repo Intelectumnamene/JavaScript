@@ -1,0 +1,19 @@
+No JavaScript, especialmente quando trabalhamos em desenvolvimento web ou com Node.js, há vários comandos de depuração que podem ser usados para inspecionar, rastrear e corrigir problemas no código. Aqui estão os principais comandos:
+
+1. **`console.log()`**: Exibe informações gerais no console, usado amplamente para verificar valores e estados de variáveis em diferentes partes do código.
+
+2. **`console.error()`**: Exibe mensagens de erro. Esse comando é útil para destacar mensagens relacionadas a falhas, erros ou exceções no código.
+
+3. **`console.warn()`**: Exibe avisos, que geralmente alertam sobre problemas potenciais, mas não erros críticos. É uma maneira de indicar questões que não interrompem o código, mas podem precisar de atenção.
+
+4. **`console.table()`**: Organiza dados em formato de tabela no console. É útil para visualizar arrays de objetos, oferecendo uma visão mais organizada dos dados.
+
+5. **`console.dir()`**: Exibe uma representação de um objeto em uma forma mais detalhada, permitindo navegar em suas propriedades, especialmente útil para visualizar objetos complexos.
+
+6. **`debugger;`**: Uma instrução que pausa a execução do código onde for inserida, abrindo as ferramentas de desenvolvedor no navegador ou o depurador no Node.js. A partir daí, é possível inspecionar variáveis e o estado atual do código passo a passo.
+
+7. **`console.time()` e `console.timeEnd()`**: Esses comandos marcam o início e o fim de um temporizador, permitindo medir o tempo de execução de um trecho de código. É útil para identificar gargalos de desempenho.
+
+8. **`console.trace()`**: Exibe a pilha de chamadas (stack trace), ou seja, mostra o caminho pelo qual o código chegou até o ponto onde `console.trace()` foi chamado. É especialmente útil para entender a sequência de chamadas de funções.
+
+Esses comandos são úteis para diferentes abordagens de depuração: desde rastreamento básico de valores até análise de desempenho e inspeção de objetos e pilhas de chamadas, facilitando a resolução de problemas em diferentes etapas do desenvolvimento.

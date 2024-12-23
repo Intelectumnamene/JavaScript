@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="teste"></p>
+    <p id="teste1"></p>
+    <p id="teste2"></p>
+    <p id="teste3"></p>
+
+
+    <script>
+
+        let func = function minhafuncao(){
+            console.log('Luiz');    
+            
+        }
+        func();
+        document.getElementById('teste').innerHTML = 'Pedro';
+
+        (function(){
+            document.getElementById('teste1').innerHTML  = 'Olá mundo !'
+        })();
+        
+
+    </script>
+</body>
+</html>

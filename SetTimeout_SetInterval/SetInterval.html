@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    button{
+        display:inline-block;
+        width: 400px;
+        height: 400px;
+        margin: auto;
+
+    }
+
+    .start{
+        color: #000;
+        background-color: green;
+    }
+    .stop{
+        color: black;
+        background-color:red;
+    }
+
+
+</style>
+<body>
+
+    <h1>Controle de Tempo </h1>
+    <h2 id="tempo">10</h2>
+
+    <button onclick="ativarContagem()" class="start">Ativar Contagem</button>
+    <button onclick="pararContagem()" class="stop">Parar Contagem</button>
+
+    <script src="./setinterval.js"></script>
+</body>
+</html>

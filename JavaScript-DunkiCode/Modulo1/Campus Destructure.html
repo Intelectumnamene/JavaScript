@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Destructure</title>
+</head>
+<body>
+    <p id="teste1"></p>
+    <p id="teste2"></p>
+    <p id="teste3"></p>
+    <p id="teste4"></p>
+
+
+    <script>
+        const arr = ['Luiz', 'Pedro','Gisele'];
+        const [a,b,c] = arr;
+        document.getElementById('teste1').innerHTML=`${a}`;
+        document.getElementById('teste2').innerHTML=`${b}`;
+        document.getElementById('teste3').innerHTML=`${c}`;
+        document.getElementById('teste4').innerHTML=`${arr}`;
+
+    </script>
+</body>
+</html>

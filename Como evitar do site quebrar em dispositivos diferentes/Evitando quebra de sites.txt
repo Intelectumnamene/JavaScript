@@ -1,0 +1,157 @@
+Para garantir que o design do site não quebre em diferentes dispositivos (desktop, tablet e celular), o **CSS `display`** é fundamental em conjunto com técnicas de **design responsivo**. Aqui estão os passos principais:
+
+---
+
+### 1. **Usar Unidades Responsivas**
+   - **Unidades como `%`, `vw`, `vh` ou `em`** ajustam os elementos de acordo com o tamanho da tela.
+   - Evite valores fixos como `px` sempre que possível.
+
+   ```css
+   body {
+       margin: 0;
+       font-size: 1em; /* Escalável em dispositivos */
+   }
+
+   .container {
+       width: 90%; /* Responsivo, adapta-se ao tamanho da tela */
+       max-width: 1200px; /* Limite para telas grandes */
+       margin: auto; /* Centraliza o conteúdo */
+   }
+   ```
+
+---
+
+### 2. **Flexbox ou Grid Layout para Controle Responsivo**
+Use `display: flex;` ou `display: grid;` para organizar o layout e permitir que os elementos se ajustem automaticamente.
+
+#### Exemplo com Flexbox:
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+.item {
+    flex: 1 1 calc(33.333% - 20px); /* 3 itens por linha */
+    min-width: 200px; /* Tamanho mínimo */
+    box-sizing: border-box;
+}
+```
+
+---
+
+#### Exemplo com Grid:
+```css
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o número de colunas */
+    gap: 20px;
+}
+```
+
+---
+
+### 3. **Media Queries para Quebras de Tela**
+Ajuste a formatação em telas menores usando `@media`.
+
+#### Exemplo:
+```css
+/* Estilo padrão para desktop */
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Estilo para telas menores que 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap; /* Ajusta para dispositivos menores */
+    }
+}
+
+/* Estilo para telas menores que 480px */
+@media (max-width: 480px) {
+    .container {
+        display: block; /* Empilha os elementos */
+    }
+}
+```
+
+---
+
+### 4. **Evitar Overflow**
+Certifique-se de que elementos como imagens e textos não excedam os limites da tela:
+
+```css
+img {
+    max-width: 100%; /* Nunca maior que o container */
+    height: auto; /* Mantém a proporção */
+}
+
+.container {
+    overflow-x: hidden; /* Evita barras de rolagem horizontais */
+}
+```
+
+---
+
+### 5. **Exemplo Completo de CSS Responsivo**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Responsivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .item {
+            flex: 1 1 calc(33.333% - 20px);
+            background: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .item {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+</body>
+</html>
+```
+
+---
+
+Com esse modelo, o layout se adapta automaticamente a qualquer tamanho de tela sem quebrar. **Flexbox**, **Grid** e **media queries** são essenciais para essa flexibilidade.

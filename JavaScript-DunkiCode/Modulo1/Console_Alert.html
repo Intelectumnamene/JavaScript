@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        body{
+           display: flex;
+           border: 1px solid black;
+           justify-content:center;
+           flex-direction: column;
+           text-align: center;
+        }
+
+        #texto1{
+            margin: auto;
+            width: auto;
+            padding: 10px;
+            background-color: aqua;
+        }
+
+        #texto2{
+            background-color: blanchedalmond;
+        }
+    </style>
+    <body>
+        <h1 id="texto1"></h1>
+        <h1 id="texto2"></h1>
+    </body>
+</html>
+
+<script>
+    console.log("OLá Mundo!")
+    document.getElementById('texto1').innerHTML = 'Olá Mundo!';
+    document.getElementById('texto2').innerHTML = 'Olá Mundo 2!';
+</script>

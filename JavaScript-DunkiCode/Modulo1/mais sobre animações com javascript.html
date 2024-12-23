@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mais sobre animações com javascript</title>
+    </head>
+
+    <style>
+.conteudo h2 span{
+    font-size: 13px;
+    cursor: pointer;
+
+}
+
+.conteudo p {
+    overflow: hidden;
+    height:0 ;
+    transition: 1s;
+}
+
+.mostrar{
+    height: 200px !important;
+}
+
+</style>
+
+    <body>
+
+        <div class="conteudo">
+
+            <h2>Título do Conteúdo <span>Ver mais!</span> </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laudantium, cumque labore sint vitae tempora maiores placeat id
+                quos consectetur, quasi similique quis officia veritatis velit
+                voluptates, voluptate voluptatem corrupti expedita.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laudantium, cumque labore sint vitae tempora maiores placeat id
+                quos consectetur, quasi similique quis officia veritatis velit
+                voluptates, voluptate voluptatem corrupti expedita.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laudantium, cumque labore sint vitae tempora maiores placeat id
+                quos consectetur, quasi similique quis officia veritatis velit
+                voluptates, voluptate voluptatem corrupti expedita.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laudantium, cumque labore sint vitae tempora maiores placeat id
+                quos consectetur, quasi similique quis officia veritatis velit
+                voluptates, voluptate voluptatem corrupti expedita.</p>
+
+        </div>
+
+        <script>
+
+
+        let span = document.querySelector('.conteudo span');
+
+
+            span.addEventListener('click',function (){
+            let conteudo = document.querySelector('.conteudo p');
+
+            if(conteudo.classList.contains('mostrar')){
+                span.innerHTML = 'Ver mais...'
+                
+                conteudo.classList.remove('mostrar');
+            }else{
+                span.innerHTML = 'Ocultar'
+                conteudo.classList.add('mostrar');
+                
+            }
+        });
+    </script>
+    </body>
+</html>

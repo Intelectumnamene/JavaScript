@@ -1,0 +1,141 @@
+Aqui estão as principais sintaxes do JavaScript que você deve conhecer ao começar a programar:
+
+### 1. **Declaração de Variáveis**
+   - **`var`**: Declara uma variável com escopo global ou de função.
+     ```javascript
+     var nome = "João";
+     ```
+   - **`let`**: Declara uma variável com escopo de bloco.
+     ```javascript
+     let idade = 30;
+     ```
+   - **`const`**: Declara uma constante, cujo valor não pode ser reatribuído.
+     ```javascript
+     const pi = 3.1415;
+     ```
+
+### 2. **Funções**
+   - **Função simples**:
+     ```javascript
+     function saudacao() {
+         console.log("Olá, Mundo!");
+     }
+     ```
+   - **Função com parâmetros**:
+     ```javascript
+     function soma(a, b) {
+         return a + b;
+     }
+     ```
+   - **Função anônima**:
+     ```javascript
+     const soma = function(a, b) {
+         return a + b;
+     };
+     ```
+
+### 3. **Estruturas Condicionais**
+   - **`if`, `else if`, `else`**:
+     ```javascript
+     if (idade > 18) {
+         console.log("Maior de idade");
+     } else {
+         console.log("Menor de idade");
+     }
+     ```
+   - **`switch`**:
+     ```javascript
+     switch (dia) {
+         case 1:
+             console.log("Segunda-feira");
+             break;
+         case 2:
+             console.log("Terça-feira");
+             break;
+         default:
+             console.log("Outro dia");
+     }
+     ```
+
+### 4. **Laços de Repetição**
+   - **`for`**:
+     ```javascript
+     for (let i = 0; i < 5; i++) {
+         console.log(i);
+     }
+     ```
+   - **`while`**:
+     ```javascript
+     let i = 0;
+     while (i < 5) {
+         console.log(i);
+         i++;
+     }
+     ```
+
+### 5. **Objetos**
+   - **Declaração e Acesso**:
+     ```javascript
+     const pessoa = {
+         nome: "Maria",
+         idade: 25
+     };
+     console.log(pessoa.nome); // Maria
+     ```
+
+### 6. **Arrays**
+   - **Declaração e Acesso**:
+     ```javascript
+     const frutas = ["maçã", "banana", "laranja"];
+     console.log(frutas[1]); // banana
+     ```
+
+### 7. **Operadores**
+   - **Aritméticos**:
+     ```javascript
+     let a = 5 + 3; // 8
+     let b = 10 - 4; // 6
+     ```
+   - **Lógicos**:
+     ```javascript
+     let x = true && false; // false
+     let y = true || false; // true
+     ```
+
+### 8. **Arrow Functions (Funções de seta)**
+   - Uma forma concisa de declarar funções.
+     ```javascript
+     const soma = (a, b) => a + b;
+     ```
+
+### 9. **Eventos (DOM Manipulation)**
+   - **Adicionar evento a um elemento**:
+     ```javascript
+     document.getElementById("botao").addEventListener("click", function() {
+         alert("Botão clicado!");
+     });
+     ```
+
+### 10. **Promessas e Async/Await**
+   - **Promessa**:
+     ```javascript
+     let promessa = new Promise((resolve, reject) => {
+         let sucesso = true;
+         if (sucesso) {
+             resolve("Sucesso!");
+         } else {
+             reject("Erro!");
+         }
+     });
+
+     promessa.then(result => console.log(result)).catch(error => console.log(error));
+     ```
+   - **Async/Await**:
+     ```javascript
+     async function buscarDados() {
+         let resultado = await promessa;
+         console.log(resultado);
+     }
+     ```
+
+Essas são algumas das sintaxes mais fundamentais de JavaScript. Se você está começando, dominá-las é um ótimo ponto de partida para avançar para tópicos mais complexos, como manipulação de dados assíncronos, frameworks, e bibliotecas.

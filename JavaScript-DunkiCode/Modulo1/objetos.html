@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="teste"></p>
+    <p id="teste2"></p>
+    <p id="teste3"></p>
+    <p id="teste4"></p>
+
+    <script>
+      let objeto = [{
+        'nome': 'Luiz',
+        'idade': 42,
+        'profissão': 'Programador',
+
+      },
+      {
+        'nome': 'Pedro',
+        'idade': 9,
+        'profissão': 'Programador',
+
+      },
+      {
+        'nome': 'Gisele',
+        'idade': 39,
+        'profissão': 'Programador',
+
+      },
+      
+    
+    
+      ]
+      console.log(objeto);
+      document.getElementById('teste').innerHTML = JSON.stringify(objeto, null, 2);
+      document.getElementById('teste2').innerHTML = JSON.stringify(objeto[0], null, 2);
+      document.getElementById('teste3').innerHTML = JSON.stringify(objeto[1], null, 2);
+      document.getElementById('teste4').innerHTML = JSON.stringify(objeto[2], null, 2);
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      //null, você está dizendo que não quer modificar nada no objeto durante a conversão.
+      //O terceiro parâmetro (2) em JSON.stringify() define o nível de espaçamento na string JSON 
+
+    </script>
+  </body>
+</html>

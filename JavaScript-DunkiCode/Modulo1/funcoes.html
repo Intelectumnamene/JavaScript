@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <p id="teste1"></p>
+    <p id="teste2"></p>
+    <p id="teste3"></p>
+    <p id="teste4"></p>
+    
+
+    <script>
+        let lista = [];
+        function testes(){
+            let mensagem = ('Chamando a função testes!');
+            console.log(mensagem)
+            lista.push(mensagem);
+            
+            
+        }
+        
+        testes();
+        console.log(lista);
+        document.getElementById('teste1').innerHTML = lista;
+
+
+
+        function teste2(nome, idade){
+            return(`Olá ${nome} sua idade é: ${idade}`)
+           
+        }
+        document.getElementById('teste2').innerHTML = teste2('Luiz', 42)
+        console.log(teste2('Luiz', 42))
+
+
+
+        function pegarNome(){
+            return 'Luiz';
+        }
+
+        let nome = pegarNome()
+        console.log(nome)
+        document.getElementById('teste3').innerHTML=nome;
+
+
+        function obterNome(parametro){
+            if(parametro == 1){
+                return 'Luiz';
+
+            }else{
+                return 'Pedro';
+            }
+
+        }
+
+        console.log(obterNome(2))
+        document.getElementById('teste4').innerHTML= obterNome(2)
+    </script>
+</body>
+</html>

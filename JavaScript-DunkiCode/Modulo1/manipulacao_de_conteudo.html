@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manipulação De Conteúdo</title>
+    </head>
+    <body>
+
+        <p id="teste">Olá Mundo1!</p>
+        <p id="teste">Olá Mundo2!</p>
+        <p id="teste">Olá Mundo3!</p>
+        <p id="teste">Olá Mundo4!</p>
+        <p id="teste">Olá Mundo5!</p>
+
+        <script>
+
+
+        let p = document.getElementsByTagName('p');
+        alert(p.length);//quantidades de tag p que há na página!
+        alert(p[2].innerHTML);//o que tem dentro das tags.
+        
+        for(let i = 0; i < p.length; i++){
+            p[i].innerHTML='Manipulado por Javascript -' +i;
+
+        }
+
+        for(let x = 0; x <10; x++){
+            p[0].innerHTML = p[0].innerHTML+ " Elemnto"
+        }
+
+
+
+
+
+        
+
+
+    </script>
+
+    </body>
+</html>

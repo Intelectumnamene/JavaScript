@@ -1,0 +1,65 @@
+Além de `.innerHTML`, existem várias outras propriedades e métodos em JavaScript para manipular ou interagir com elementos HTML no DOM. Aqui estão algumas delas:
+
+### 1. **Manipulação de Texto e Conteúdo**
+- **`.innerText`**: Define ou obtém o texto visível de um elemento (respeita estilos CSS como `display: none` e ignora conteúdo oculto).
+- **`.textContent`**: Define ou obtém o texto completo de um elemento, incluindo conteúdo oculto.
+- **`.outerHTML`**: Obtém ou substitui o elemento inteiro, incluindo suas tags HTML.
+
+---
+
+### 2. **Manipulação de Atributos**
+- **`.getAttribute('atributo')`**: Obtém o valor de um atributo específico.
+- **`.setAttribute('atributo', 'valor')`**: Define ou atualiza um atributo.
+- **`.removeAttribute('atributo')`**: Remove um atributo de um elemento.
+- **`.hasAttribute('atributo')`**: Verifica se o elemento possui um atributo específico.
+
+---
+
+### 3. **Manipulação de Classes**
+- **`.classList.add('classe')`**: Adiciona uma classe ao elemento.
+- **`.classList.remove('classe')`**: Remove uma classe do elemento.
+- **`.classList.toggle('classe')`**: Adiciona ou remove uma classe com base no estado atual.
+- **`.classList.contains('classe')`**: Verifica se o elemento contém uma classe específica.
+
+---
+
+### 4. **Manipulação de Estilos**
+- **`.style.property`**: Define ou obtém um estilo inline específico (ex.: `element.style.color = 'red';`).
+- **`.cssText`**: Define múltiplos estilos como uma string (ex.: `element.style.cssText = "color: blue; font-size: 16px;"`).
+- **`getComputedStyle(element)`**: Obtém os estilos calculados aplicados ao elemento.
+
+---
+
+### 5. **Manipulação de Elementos**
+- **`.appendChild()`**: Adiciona um elemento filho ao final de outro.
+- **`.removeChild()`**: Remove um elemento filho.
+- **`.replaceChild()`**: Substitui um elemento filho por outro.
+- **`.insertBefore(novoElemento, elementoExistente)`**: Insere um novo elemento antes de um elemento existente.
+
+---
+
+### 6. **Propriedades do Formulário**
+- **`.value`**: Obtém ou define o valor de um campo de entrada ou textarea.
+- **`.checked`**: Verifica se um checkbox ou rádio está selecionado.
+- **`.selected`**: Verifica ou define se uma opção em um `<select>` está selecionada.
+
+---
+
+### 7. **Manipulação de Eventos**
+- **`.addEventListener('evento', callback)`**: Adiciona um ouvinte de evento ao elemento.
+- **`.removeEventListener('evento', callback)`**: Remove um ouvinte de evento.
+- **`.onclick`**: Define uma função que será executada ao clicar no elemento.
+
+---
+
+### 8. **Navegação no DOM**
+- **`.parentNode`**: Obtém o elemento pai.
+- **`.childNodes`**: Obtém uma lista de todos os filhos do nó (incluindo nós de texto).
+- **`.children`**: Obtém apenas os elementos filhos.
+- **`.firstChild`** / **`.lastChild`**: Obtém o primeiro/último nó filho.
+- **`.nextSibling`** / **`.previousSibling`**: Navega entre os irmãos (incluindo nós de texto).
+- **`.nextElementSibling`** / **`.previousElementSibling`**: Navega entre os irmãos que são elementos.
+
+---
+
+Se você estiver buscando um exemplo de como usar algum desses, é só me avisar! 😊

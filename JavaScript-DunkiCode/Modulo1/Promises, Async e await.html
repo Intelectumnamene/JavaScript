@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Promises, Async e await</title>
+    </head>
+    <body>
+        <p id="teste"></p>
+
+        <script>
+        function testes(){
+            return new Promise(function(resolve, reject){
+                const erro = true;
+                if(erro){
+                    reject('Erro..');
+                    document.getElementById('teste').innerHTML = `Erro..`;
+                }else{
+                    resolve('A promise foi resolvida com sucesso.');
+                    document.getElementById('teste').innerHTML = `resolvida`;
+                }
+            })
+
+        }
+        
+        testes().then(function(res){
+            alert(res);
+        }).catch(function(err){
+            alert(err);
+        })
+    </script>
+
+    </body>
+</html>

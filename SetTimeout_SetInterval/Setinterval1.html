@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+</head>
+<body>
+    <h1 id="tempo">10</h1> <!-- Tempo inicial -->
+    <button onclick="iniciarContagem()">Iniciar Contagem</button>
+    <button onclick="pararContagem()">Parar Contagem</button> <!-- Botão para parar manualmente -->
+
+    <script>
+        let tempo; // Variável global para armazenar o intervalo
+
+        function iniciarContagem() {
+            document.getElementById('tempo').innerHTML = "10"; // Valor inicial
+
+            tempo = setInterval(function () {
+                let cronometro = document.getElementById('tempo').innerHTML;
+                let soma = parseInt(cronometro) - 1;
+
+                if (soma === 0) {
+                    document.getElementById('tempo').innerHTML = "Tempo esgotado";
+                    pararContagem();
+                } else {
+                    document.getElementById('tempo').innerHTML = soma;
+                }
+            }, 1000);
+        }
+
+        function pararContagem() {
+            clearInterval(tempo);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt</title>
+    </head>
+    <body>
+
+        <p id="teste1"></p>
+        <p id="teste2"></p>
+        <p id="teste3"></p>
+        <p id="teste4"></p>
+
+        <script>
+            let  nome = prompt('Qual seu nome?');
+            let  cidade = prompt('Qual sua cidade?');
+            let  idade = prompt('Qual sua idade?');
+
+            document.getElementById('teste1').innerHTML = nome;
+            document.getElementById('teste2').innerHTML = cidade;
+            document.getElementById('teste3').innerHTML = idade;
+            document.getElementById('teste4').innerHTML = `Seu nome é : ${nome} sua cidade é ${cidade} e sua idade é ${idade}.`;
+
+
+
+      
+
+        </script>
+    </body>
+</html>

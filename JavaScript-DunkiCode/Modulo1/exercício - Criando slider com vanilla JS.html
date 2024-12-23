@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slider com Vanilla JS</title>
+        <style>
+            /* Container principal */
+            .container {
+                position: relative;
+                height: 300px; /* Altura fixa do slider */
+                overflow: hidden; /* Garante que imagens grandes não vazem */
+            }
+
+            /* Imagens dentro do slider */
+            .container img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%; /* Faz com que a imagem preencha o contêiner */
+                object-fit: cover; /* Ajusta a imagem para caber sem deformar */
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+
+            /* Define a primeira imagem como visível por padrão */
+            .container img:first-child {
+                opacity: 1;
+            }
+
+            /* Estilo dos bullets */
+            .bullets {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .bullet-single {
+                margin: 0 8px;
+                cursor: pointer;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                background-color: #ccc;
+            }
+
+            .active-bullet {
+                background-color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="https://picsum.photos/id/237/800/600" alt="Image 1" />
+            <img src="https://picsum.photos/id/238/800/600" alt="Image 2" />
+            <img src="https://picsum.photos/id/239/800/600" alt="Image 3" />
+        </div>
+
+        <div class="bullets">
+            <div class="active-bullet bullet-single"></div>
+            <div class="bullet-single"></div>
+            <div class="bullet-single"></div>
+        </div>
+
+        <script>
+            // Capturando os elementos apenas uma vez
+            const images = document.querySelectorAll('.container img');
+            const bullets = document.querySelectorAll('.bullet-single');
+            let lastIndex = 0;
+
+            // Adicionando evento de clique para cada bullet
+            bullets.forEach((bullet, index) => {
+                bullet.addEventListener('click', () => {
+                    // Atualizando a opacidade das imagens
+                    images[lastIndex].style.opacity = 0;
+                    images[index].style.opacity = 1;
+
+                    // Atualizando a classe das bullets
+                    bullets[lastIndex].classList.remove('active-bullet');
+                    bullets[index].classList.add('active-bullet');
+
+                    // Atualizando o índice da última imagem exibida
+                    lastIndex = index;
+                });
+            });
+        </script>
+    </body>
+</html>

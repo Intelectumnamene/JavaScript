@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Dinâmica</title>
+</head>
+<body>
+    <p id="teste"></p>
+    <script>
+        let numero1 = parseInt( prompt('Informe primeiro número: '));
+        let numero2 = parseInt( prompt('Informe o segundo número: '));
+        let sinal = prompt('Digite o operador matemático desejado. (-)Subtração, (+)Soma, (/)Divisão e (*)multiplicação');
+
+        while( sinal != "-" && sinal != "+" && sinal != "*" && sinal != "/"){
+            alert('Favor digitar  o operador correto!');
+            sinal = prompt('Digite o operador matemático desejado. (-)Subtração, (+)Soma, (/)Divisão e (*)multiplicação');
+        }
+        
+        // numero1 = parseInt(numero1);
+        // numero2 = parseInt(numero2);
+        
+
+        let resultado = 0
+
+        if(sinal === "*"){
+            resutado = numero1 * numero2;
+        }else if(sinal ==="+"){
+            resultado = numero1 + numero2;
+        }else if(sinal === "-"){
+            resultado = numero1 - numero2;
+        }else if(sinal ==="/"){
+            resultado = numero1 / numero2;
+
+        }
+        console.log(resultado);       
+
+        
+      
+    </script>
+    
+</body>
+</html>

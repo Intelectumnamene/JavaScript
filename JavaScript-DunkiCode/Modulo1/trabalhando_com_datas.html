@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com datas</title>
+</head>
+<body>
+    <p id="teste"></p>
+    <p id="teste1"></p>
+    <p id="teste2"></p>
+    <p id="teste3"></p>
+
+    
+
+    <script>
+        let data = new Date();
+        //alert(data.getDate());
+        document.getElementById('teste').innerHTML= data.getDate();
+        document.getElementById('teste1').innerHTML= data.getFullYear();
+        document.getElementById('teste2').innerHTML= data.getDay();
+        document.getElementById('teste3').innerHTML= data.getHours();
+
+
+
+
+
+
+    </script>
+</body>
+</html>

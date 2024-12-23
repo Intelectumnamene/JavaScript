@@ -1,0 +1,19 @@
+As principais sintaxes de JavaScript incluem:
+
+1. **Declaração de variáveis**: O JavaScript utiliza `var`, `let` e `const` para declarar variáveis. `var` possui escopo global ou de função, enquanto `let` e `const` possuem escopo de bloco, com `const` sendo utilizado para variáveis cujo valor não pode ser reatribuído.
+
+2. **Funções**: Funções podem ser declaradas de maneira tradicional com a palavra-chave `function` ou utilizando funções anônimas e expressões de função (como arrow functions), que são uma forma mais compacta e moderna de definir funções.
+
+3. **Estruturas condicionais**: Para executar blocos de código com base em condições, usamos `if`, `else` e `switch`. O `if` é usado para condições simples, enquanto o `switch` é útil para comparar uma variável com múltiplos valores possíveis.
+
+4. **Laços de repetição**: Os laços `for`, `while` e `do...while` permitem a repetição de blocos de código. `for` é utilizado quando se conhece o número de iterações, enquanto `while` e `do...while` são usados quando a condição de parada depende de uma avaliação contínua.
+
+5. **Objetos e Arrays**: Objetos são estruturas de dados chave-valor, e arrays são listas ordenadas. Ambos são fundamentais para armazenar e manipular dados de forma eficiente.
+
+6. **Operadores**: JavaScript possui operadores aritméticos, lógicos e de comparação que permitem realizar operações matemáticas, combinar expressões booleanas e comparar valores.
+
+7. **Eventos e manipulação do DOM**: O JavaScript permite adicionar eventos a elementos HTML, como cliques e mudanças, e manipular a estrutura da página em tempo real, facilitando interatividade.
+
+8. **Promessas e Async/Await**: Para lidar com operações assíncronas, JavaScript utiliza promessas (`Promise`), que representam um valor que pode estar disponível agora ou no futuro. `async/await` oferece uma maneira mais simples e legível de lidar com código assíncrono.
+
+Essas são as bases que você precisa para começar a programar em JavaScript, e à medida que avança, pode explorar temas mais complexos como APIs e frameworks.

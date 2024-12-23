@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Condições</title>
+    </head>
+    <body>
+
+        <p id="teste"></p>
+        <p id="teste2"></p>
+
+        <script>
+        //let question = prompt("Qual seu nome ?")
+        let nome = 'Luiz';
+        let numero = '42';
+
+        if(nome == 'Luiz'){
+            console.log('Verdadeiro');
+        }else if(nome == 'luiz'){//o javascript leva em consideração maiúsculo e minúsculo.
+            console.log('Entramos na condição falsa!')
+        }else{
+            console.log('Entrou no else!')
+        }
+
+        if(numero <= 10){
+            console.log('O número é mernor que 10');
+
+        }else if(numero >= 10){
+            console.log('O número é maior que 10');
+        }
+
+        if(nome != 'felipe'){
+            console.log('Sim o nome é diferente!');
+        }
+
+        if(numero != 10 && nome == 'Luiz'){
+            console.log('Condição verdadeira.')
+        }
+
+        if(numero == 10 || nome == 'Luiz'){
+            console.log('Condição verdadeira! Já que uma delas é verdadeira!')
+        }
+
+
+
+
+
+
+
+
+       // let mensagem = idade > 18 ? "Pode sair sozinho" : "Pode ficar em casa!";
+        document.getElementById('teste').innerHTML = mensagem;
+        document.getElementById('teste2').innerHTML=question;
+        console.log(mensagem);
+
+    </script>
+    </body>
+</html>

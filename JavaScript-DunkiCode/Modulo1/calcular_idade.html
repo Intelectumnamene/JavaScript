@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="teste1"></p>
+
+        <script>
+
+        let ano_nacimento = prompt("Informe seu ano de nascimento?");
+        while(ano_nacimento >= 2024){
+            alert("Favor digitar o ano corretamente")
+            ano_nacimento = prompt("Informe seu ano de nascimento?");
+    
+        }
+        let ano_atual = prompt("Informe o ano atual:")
+        let resulatado = ano_atual - ano_nacimento;    
+        
+        console.log(`Sua idade é: ${resulatado}.`);
+        document.getElementById('teste1').innerHTML = `Sua idade é ${resulatado} anos`;
+
+
+
+    </script>
+    </body>
+</html>

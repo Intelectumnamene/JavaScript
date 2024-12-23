@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array e Objetos</title>
+</head>
+<body>
+    <script>
+
+        window.onload = function(){
+            //array
+            var nome = []
+            nome[1] = 'Luiz';
+            nome[2]= 'Pedro';
+
+            console.log(`${nome[1]} e ${nome[2]}`)
+            
+        }
+    </script>
+    <script>
+        
+        //objeto
+        window.onload = function(){ 
+            var animal = {};
+            animal.nome = [];
+            animal.peso = '24kg';
+            animal.idade = 23;
+            animal['idade']= 24;
+
+            animal.nome[0] = 'Fofinha'
+            animal.nome[1]= 'Pudim'
+
+            console.log(animal.nome, animal.idade)
+            console.log(animal['idade'])
+            console.log(animal.nome[0], animal.nome[1]);
+        }
+    </script>
+</body>
+</html>

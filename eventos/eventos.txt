@@ -1,0 +1,40 @@
+Eventos em JavaScript são ações ou ocorrências que acontecem no navegador e às quais você pode responder usando código. Esses eventos podem ser gerados pelo usuário (como cliques, digitação ou rolagem), pelo navegador (como carregamento de página ou erros) ou por elementos interativos.
+
+Aqui estão os principais tipos de eventos em JavaScript:
+1. Eventos de Mouse
+
+    click: Disparado quando um elemento é clicado.
+    dblclick: Disparado quando um elemento é clicado duas vezes rapidamente.
+    mousedown: Disparado quando o botão do mouse é pressionado.
+    mouseup: Disparado quando o botão do mouse é solto.
+    mousemove: Disparado enquanto o mouse é movido.
+    mouseenter e mouseleave: Disparados ao entrar/sair de um elemento sem entrar nos seus filhos.
+    mouseover e mouseout: Disparados ao passar o mouse sobre o elemento (incluindo seus filhos).
+
+2. Eventos de Teclado
+
+    keydown: Disparado quando uma tecla é pressionada.
+    keyup: Disparado quando uma tecla é solta.
+    keypress (obsoleto): Disparado enquanto a tecla está sendo pressionada (use keydown ou keyup em vez disso).
+
+3. Eventos de Formulário
+
+    submit: Disparado quando um formulário é enviado.
+    change: Disparado quando o valor de um campo de entrada muda.
+    input: Disparado enquanto o valor de um campo está sendo digitado.
+    focus: Disparado quando um elemento recebe foco.
+    blur: Disparado quando um elemento perde o foco.
+
+4. Eventos de Janela e Documento
+
+    load: Disparado quando uma página ou imagem é totalmente carregada.
+    resize: Disparado quando a janela do navegador é redimensionada.
+    scroll: Disparado enquanto a página é rolada.
+    unload: Disparado quando a página está prestes a ser fechada (uso limitado hoje em dia).
+    DOMContentLoaded: Disparado quando o HTML inicial foi completamente carregado e analisado.
+
+5. Eventos de Toque (em dispositivos móveis)
+
+    touchstart: Disparado quando a tela é tocada.
+    touchmove: Disparado enquanto um toque é movido.
+    touchend: Disparado quando o toque termina.
